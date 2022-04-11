@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TFM José Manuel Simón Ramos</title>
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container-fluid">
+        {% with lista_confirmacion = get_flashed_messages(category_filter = ["ok"]) %}
+        {% if lista_confirmacion %}
+        <div class="row alert alert-success" role="alert">
+            <ul class=flashes>
+                {% for confirmacion in lista_confirmacion %}
+                  <li>{{ confirmacion }}</li>
+                {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endwith %}
+        
+        {% with lista_errores = get_flashed_messages(category_filter = ["error"]) %}
+        {% if lista_errores %}
+        <div class="row alert alert-danger" role="alert">
+            <ul class=flashes>
+                {% for error in lista_errores %}
+                  <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endwith %}
+
+       <div class="row cabecera">
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="inputDoc">Selecciona el Documento a Anonimizar</label>
+                <input name="input-doc" type="file" class="form-control-file" id="input-doc">
+            
+                <button name="btn-cargar" id="btn-cargar" type="submit" class="btn btn-primary" value="Cargar">Cargar Documento</button>
+
+                <button name="btn-anonimizar" id="btn-anonimizar" type="submit" class="btn btn-secondary" value="Anonimizar">Anonimizar</button>
+
+                <button name="btn-exportar" id="btn-exportar" type="submit" class="btn btn-success" value="Exportar">Exportar Documento</button>
+
+            </div>
+          </form>
+
+       </div> 
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 input-div">
+                {% if visualizacion_prediccion %}
+                <h1 class="titulo">DOCUMENTO ORIGINAL</h1>
+                {{visualizacion_prediccion}}
+                {% else %}
+                <h1 class="titulo">DOCUMENTO ORIGINAL</h1>
+                {% endif %}
+            </div> 
+
+            <div class="col-lg-6 col-sm-12 output-div">
+                {% if visualizacion_nuevo_doc %}
+                <h1 class="titulo">NUEVO DOCUMENTO</h1>
+                {{visualizacion_nuevo_doc}}
+                {% else %}
+                <h1 class="titulo">NUEVO DOCUMENTO</h1>
+                {% endif %}
+            </div> 
+        </div>
+    </div>
+</body>
+
+</html>

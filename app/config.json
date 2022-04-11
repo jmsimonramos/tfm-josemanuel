@@ -1,0 +1,76 @@
+{
+    "PDF":{
+        "titulo": "TMF José Manuel Simón Ramos",
+        "fuente": "./datos/fonts/fira.ttf",
+        "margen": 15.0,
+        "logo_path": "./static/logo.png",
+        "output_path": "./output"
+    },
+    "ANONIMIZACION":{
+        "JERARQUIA": ["PROVINCIA", "CIUDAD", "CP"],
+        "umbral_coincidencia": 0.8,
+        "intentos": 5,
+        "intentos_antes_dividir": 15000,
+        "intentos_despues_dividir": 30000,
+        "ENTIDADES": [
+            "NOMBRE",
+            "APELLIDO",
+            "DNI",
+            "DIRECCION",
+            "CIUDAD",
+            "PROVINCIA",
+            "CP",
+            "TELEFONO",
+            "REF_CATASTRAL",
+            "SEGURIDAD_SOCIAL",
+            "CUENTA_BANCARIA",
+            "EMAIL",
+            "MATRICULA",
+            "CSV",
+            "URL"
+        ],
+        "EXPRESIONES_REGULARES": {
+            "EMAIL": "((?<=^)|(?<=\\s))([\\w-]+(\\.[\\w-]+)*@([\\w-]+\\.)+\\w+)(?=$|[\\s\\.])",
+            "DNI": "\\b(?=\\w)([a-zA-Z]{1}?[\\s-]{1,}?\\d{8}|\\d{8}[\\s-]{1,}?[a-zA-Z]{1})\\b(?<=\\w)",
+            "CUENTA_BANCARIA": "ES[\\s.-]?\\d{2}[\\s.-]?\\d{4}[\\s.-]?\\d{4}[\\s.-]?\\d{4}[\\s.-]?\\d{4}[\\s.-]?\\d{4}",
+            "MATRICULA": "\\b(?=\\w)\\d{4}\\s?-?\\s?[b-df-hj-ñp-tv-zB-DF-HJ-ÑP-TV-Z]{3,4}\\b(?<=\\w)",
+            "CSV": "\\w{5}-\\w{5}-\\w{5}",
+            "URL": "https?:\/\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)",
+            "REF_CATASTRAL": "\\b(?=\\w)(\\d{7}\\s?\\w{2}\\s?\\d{4}\\s?\\w\\s?\\d{4}\\s?\\w{2}|\\d{5}\\s?\\w\\s?\\d{12}\\s?\\w{2})\\b(?<=\\w)"
+        }
+    },
+    "META": {
+        "path_modelo": "./models/modeloTFM",
+        "path_output_doc_bin": "./tmp/output_doc.bin",
+        "tmp": "./tmp/",
+        "input_docs": "./doc/",
+        "output_docs": "./doc/output/",
+        "input_div_path": "./tmp/input-div.bin",
+        "output_img_grafos": "./output",
+        "path_data_csv": "./datos/csv/dataESP.csv",
+        "path_data_bin": "./datos/serializados/grafoESP.bin",
+        "path_provincias": "./datos/diccionario/provincias.txt",
+        "path_diccionario_files": "./datos/diccionario/",
+        "path_diccionario_bin": "./datos/serializados/diccionarioReemplazos.bin",
+        "path_logs": "./tmp/tiempoEjecucion.log"
+      },
+    "HERRAMIENTA": {
+        "COLORES" : {
+            "NOMBRE": "#E6B0AA", 
+            "APELLIDO": "#73C1A2",
+            "DNI": "#AF601A",
+            "DIRECCION":"#D2B4DE ", 
+            "CIUDAD":"#A9CCE3", 
+            "PROVINCIA":"#AED6F1",
+            "CP": "#F5B7B1", 
+            "TELEFONO": "#A3E4D7" , 
+            "REF_CATASTRAL":"#F9E79F", 
+            "SEGURIDAD_SOCIAL":"#FAD7A0", 
+            "CUENTA_BANCARIA": "#5DADE2", 
+            "EMAIL": "#EDBB99", 
+            "MATRICULA": "#5D6D7E",
+            "CSV": "#DAF7A6",
+            "URL": "#FF5733"
+        }
+    } 
+}

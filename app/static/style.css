@@ -1,0 +1,40 @@
+#input-doc {
+  margin-right: 60px;
+}
+
+button{
+  margin-right: 5px;
+}
+
+.alert{
+  margin-bottom: 0px;
+  align-items: center;
+  align-content: center;
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecera {
+  margin-bottom: 10px;
+  background-color: orange;
+  height: 50px;
+  align-items: center;
+}
+
+.titulo{
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.input-div, .output-div { 
+    height: 80vh ;
+    overflow: auto;
+    border: 3px ;
+    border-style: solid;
+}

@@ -1,0 +1,52 @@
+Álava;945
+Albacete;967
+Alicante;950
+Almería;920
+Ávila;924
+Badajoz;924
+Islas Baleares;971
+Barcelona;93
+Burgos;947
+Cáceres;927
+Cádiz;956
+Castellón;964
+Ciudad Real;926
+Córdoba;957
+A Coruña;981
+Cuenca;969
+Girona;972
+Granada;958
+Guadalajara;949
+Gipuzkoa;943
+Huelva;959
+Huesca;974
+Jaén;953
+León;987
+Lleida;973
+La Rioja;941
+Lugo;982
+Madrid;91
+Málaga;95
+Murcia;968
+Navarra;948
+Ourense;988
+Asturias;98
+Palencia;979
+Las Palmas;928
+Pontevedra;986
+Salamanca;923
+Santa Cruz de Tenerife;922
+Cantabria;942
+Segovia;921
+Sevilla;95
+Soria;975
+Tarragona;977
+Teruel;978
+Toledo;925
+Valencia;96
+Valladolid;983
+Bizkaia;94
+Zamora;980
+Zaragoza;976
+Ceuta;956
+Melilla;95
